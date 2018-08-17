@@ -5,12 +5,12 @@ import com.re.utils.JdbcUtils;
 import java.sql.*;
 
 public class Dao {
-    private Connection conn = null;
+    private Connection conn;
     private PreparedStatement pstmt = null;
     private ResultSet rs = null;
 
     public Connection getConn() {
-        return conn;
+        return new Dao().conn;
     }
 
     public void setConn(Connection conn) {

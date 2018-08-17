@@ -21,7 +21,8 @@
     <input type="checkbox" name="savePassword" id="savePassword"/><label for="savePassword">保存密码</label>
     <input type="checkbox" name="autoLogin" id="autoLogin"/><label for="autoLogin">自动登录</label>
     <br/>
-    <button type="button" onclick="login();">提交</button>
+    <button type="button" onclick="login();">登录</button>
+    <button type="button" onclick="register();">注册</button>
 </form>
 </body>
 <script>
@@ -41,30 +42,30 @@
     function login() {
         var username = document.getElementById("username").value;
         var password = document.getElementById("password").value;
-        checkUsernameAndPassword(username,password);
-        // var autoLogin = document.getElementById("autoLogin").checked;
-        // if (autoLogin) {
-        //     //如果为
-        // }
-        //loginSubmit();
+        checkUsernameAndPassword(username, password);
     }
+
+    function register() {
+        window.location.href = '/register?action=jumpToRegister';
+    }
+
 
     function checkUsernameAndPassword(username, password) {
         $.ajax({
-            url: "/loginCheck",
+            url: "/user?action=loginCheck",
             dataType: "json",
             data: {
                 "username": username,
                 "password": password
             },
-            type:"post",
-            success:function(){
+            type: "post",
+            success: function () {
                 alert("123");
             }
         })
     }
 
-    /**script
+    /**
      * 提交表单
      */
     function loginSubmit() {

@@ -1,11 +1,11 @@
 package com.re.model;
 
-public class Person {
+public class User {
     private int id;
     private String name;
     private String password;
 
-    public Person(String name, String password) {
+    public User(String name, String password) {
         this.setName(name);
         this.setPassword(password);
     }
