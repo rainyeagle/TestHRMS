@@ -66,6 +66,7 @@ fabric.properties
 # IntelliJ project files
 .idea
 *.iml
+*.ipr
 out
 gen### Java template
 # Compiled class file

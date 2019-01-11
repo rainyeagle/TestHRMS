@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-    <title>注册</title>
+    <title>注册1</title>
     <script type="application/javascript" src="${pageContext.request.contextPath}/js/jquery-1.9.1.min.js"></script>
 </head>
 <body>
